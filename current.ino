@@ -40,17 +40,17 @@ void loop() {
   Serial.print(" Right Sensor: ");
   Serial.println(rightValue);
 
-if (leftValue == 1 && rightValue == 1) {
+if (leftValue == 0 && rightValue == 0) {
     Serial.println("Moving Forward");
     forward();
   }
   // If only the left sensor detects a line, turn right
-  else if (leftValue == 0) {
+  else if (leftValue == 1) {
     Serial.println("Turning Left");
     turnLeft();
   }
   // If only the right sensor detects a line, turn left
-  else if (rightValue == 0) {
+  else if (rightValue == 1) {
     Serial.println("Turning Right");
     turnRight();
   }
