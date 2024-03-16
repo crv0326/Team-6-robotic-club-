@@ -45,12 +45,12 @@ if (leftValue == 0 && rightValue == 0) {
     forward();
   }
   // If only the left sensor detects a line, turn right
-  else if (leftValue == 1) {
+  else if (leftValue == 1 && rightValue == 0) {
     Serial.println("Turning Left");
     turnLeft();
   }
   // If only the right sensor detects a line, turn left
-  else if (rightValue == 1) {
+  else if (rightValue == 1 && leftValue == 0) {
     Serial.println("Turning Right");
     turnRight();
   }
